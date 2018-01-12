@@ -15,7 +15,12 @@ $f3 = Base::instance();
 //Define a default route
 $f3->route('GET /', function (){
     $view = new View;
-    echo $view ->render('home.html');
+    echo $view ->render('views/hello.html');
+});
+
+//Define a page 1 route
+$f3->route('GET/page1', function (){
+    echo '<h1>This is page 1</h1>';
 });
 
 //run fat free
